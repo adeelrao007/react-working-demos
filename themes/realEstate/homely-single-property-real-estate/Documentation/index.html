@@ -1,0 +1,543 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Homely Documentation</title>
+    <link rel="icon" href="images/help.png" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+</head>
+
+<body>
+    <div class="container">
+        <!-- =============================== -->
+        <!-- INTRODUCTION -->
+        <!-- =============================== -->
+        <section>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="title">Homely's Documentation</h1>
+                    <p>This documentation will help you understand, customize, and integrate the Homely HTML Template efficiently.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============================== -->
+        <!-- GETTING STARTED -->
+        <!-- =============================== -->
+        <section id="getting-started">
+            <h2>Getting Started</h2>
+
+            <!-- 1. Edit HTML Files -->
+            <div class="expand">
+                <div class="title">Edit HTML Files</div>
+                <div class="content">
+                    <p>
+                        You can edit all <code>.html</code> files using any text editor or IDE.  
+                        We recommend lightweight and efficient code editors for a smoother workflow:
+                    </p>
+                    <ul>
+                        <li><a href="https://www.sublimetext.com/download" target="_blank">Sublime Text</a> – Fast, customizable, and supports multiple cursors.</li>
+                        <li><a href="https://notepad-plus-plus.org/downloads" target="_blank">Notepad++</a> – Lightweight and easy to use on Windows.</li>
+                        <li><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> – Free, powerful, and feature-rich.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2. HTML Structure -->
+            <div class="expand">
+                <div class="title">HTML Structure</div>
+                <div class="content">
+                    <p>
+                        This template is built using the <strong>Bootstrap 5</strong> framework,  
+                        ensuring a fully responsive and mobile-friendly layout.  
+                        The basic HTML structure is organized into three main parts: 
+                        <strong>Header</strong>, <strong>Main Content</strong>, and <strong>Footer</strong>.
+                    </p>
+
+                    <ul>
+                        <li><strong>Header:</strong> Contains the navigation menu, logo and top bar.</li>
+                        <li><strong>Main:</strong> The core content area of each page, placed inside the <code>&lt;main&gt;</code> tag.</li>
+                        <li><strong>Footer:</strong> Includes contact info, copyright, and social media links.</li>
+                    </ul>
+
+                    <pre>
+&lt;header&gt;
+    &lt;!-- Navigation, Logo, and Top Bar --&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+   &lt;section id="about"&gt;
+       &lt;div class="container"&gt;
+           &lt;div class="row"&gt;
+               &lt;div class="col-md-4"&gt;
+                   Content Block 1
+               &lt;/div&gt;
+
+               &lt;div class="col-md-8"&gt;
+                   Content Block 2
+               &lt;/div&gt;
+           &lt;/div&gt;
+       &lt;/div&gt;
+   &lt;/section&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+    &lt;!-- Footer Links and Copyright --&gt;
+&lt;/footer&gt;</pre>
+
+                </div>
+            </div>
+
+
+            <!-- 3. Create Columns -->
+            <div class="expand">
+                <div class="title">Create Columns</div>
+                <div class="content">
+                    <p>
+                        This template uses the <strong>Bootstrap 5</strong> responsive 12-column grid system.  
+                        Each <code>.row</code> can contain multiple columns, and the total width of all columns in a row should add up to <strong>12</strong>.
+                    </p>
+
+                    <pre>
+&lt;div class="row"&gt;
+    &lt;div class="col-md-6"&gt;Half width (6/12)&lt;/div&gt;
+    &lt;div class="col-md-6"&gt;Half width (6/12)&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+    &lt;div class="col-md-4"&gt;One-third width (4/12)&lt;/div&gt;
+    &lt;div class="col-md-8"&gt;Two-thirds width (8/12)&lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <p>
+                        You can also use responsive classes like <code>.col-sm-*</code>, <code>.col-md-*</code>, 
+                        <code>.col-lg-*</code>, and <code>.col-xl-*</code> to control layout on different screen sizes.
+                    </p>
+
+                    <p><strong>Tip:</strong> For more detailed examples and advanced layout options,  
+                    please refer to the official <a href="https://getbootstrap.com/docs/5.0/layout/grid/" target="_blank">Bootstrap 5 Grid Documentation</a>.</p>
+                </div>
+            </div>
+
+
+            <!-- 4. Enable RTL -->
+            <div class="expand">
+                <div class="title">Enable RTL (Right-to-Left)</div>
+                <div class="content">
+                    <p>
+                        To support languages like Arabic or Hebrew, enable RTL mode by modifying  
+                        the <strong>designesia.js</strong> configuration file:
+                    </p>
+                    <pre>var enableRtl = 'on'; // on = enable RTL, off = disable</pre>
+                    <p><strong>Note:</strong> Ensure your text direction in HTML also uses <code>dir="rtl"</code> when RTL mode is on.</p>
+                </div>
+            </div>
+
+            <!-- 5. Enable/Disable Preloader -->
+            <div class="expand">
+                <div class="title">Enable/Disable Preloader</div>
+                <div class="content">
+                    <p>
+                        To show or hide the preloader animation before your page loads,  
+                        change the <strong>preloader</strong> variable in <strong>designesia.js</strong>:
+                    </p>
+                    <pre>var preloader = 'on'; // on = enable, off = disable</pre>
+                    <p><strong>Tip:</strong> Turn off preloader during development for faster testing.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =============================== -->
+        <!-- STYLING & CUSTOMIZATION -->
+        <!-- =============================== -->
+        <section>
+            <h2>Styling & Customization</h2>
+
+            <div class="expand">
+                <div class="title">Change Accent Color</div>
+                <div class="content">
+                    <p>
+                        The template includes several pre-made color schemes that control the overall accent color 
+                        (such as buttons, icons, etc).  
+                        You can easily change the accent color by editing the linked stylesheet in the 
+                        <code>&lt;head&gt;</code> section of your HTML file — usually around line 20.
+                    </p>
+
+                    <pre>
+&lt;link id="colors" href="css/colors/scheme-01.css" rel="stylesheet" type="text/css"&gt;</pre>
+
+                    <p>
+                        Simply replace <code>scheme-01.css</code> with any of the other available color files.  
+                        All color options are located inside the <strong>css/colors/</strong> folder.
+                    </p>
+
+
+                    <p>
+                        <strong>Tip:</strong> You can also create your own color scheme by duplicating an existing 
+                        <code>scheme-xx.css</code> file, renaming it, and modifying the color variables inside.
+                    </p>
+                </div>
+            </div>
+
+            <div class="expand">
+                <div class="title">Custom Background Color for Div/Section</div>
+                <div class="content">
+                    <p>
+                        You can easily apply a background color to any <code>&lt;div&gt;</code> or 
+                        <code>&lt;section&gt;</code> without editing the CSS file.  
+                        Simply use the <strong>data-bgcolor</strong> attribute and assign your preferred color value.
+                    </p>
+
+                    <pre>
+&lt;div data-bgcolor="#333333"&gt;
+    Content here
+&lt;/div&gt;</pre>
+
+                    <p>
+                        The <code>data-bgcolor</code> attribute accepts any valid color format:
+                    </p>
+
+                    <ul>
+                        <li><strong>HEX:</strong> <code>#ff0000</code></li>
+                        <li><strong>RGB:</strong> <code>rgb(255, 0, 0)</code></li>
+                        <li><strong>RGBA:</strong> <code>rgba(255, 0, 0, 0.8)</code></li>
+                    </ul>
+                    
+                </div>
+            </div>
+
+
+            <div class="expand">
+                <div class="title">Custom Background Image for Div/Section</div>
+                <div class="content">
+                    <p>
+                        You can set a background image for any <code>&lt;div&gt;</code> or <code>&lt;section&gt;</code> 
+                        using the <strong>data-bgimage</strong> attribute — no CSS editing required.
+                    </p>
+
+                    <pre>
+&lt;div data-bgimage="url(images/background/bg-1.jpg)"&gt;
+    Content here
+&lt;/div&gt;</pre>
+
+                    <p>
+                        The <code>data-bgimage</code> attribute automatically applies the specified image 
+                        as the element’s background. Make sure the image path is correct relative to your HTML file.
+                    </p>
+                    
+                </div>
+            </div>
+
+
+            <div class="expand">
+                <div class="title">Parallax Background Image</div>
+                <div class="content">
+                    <p>
+                        The template uses the <strong>Jarallax</strong> library to create smooth parallax scrolling effects.  
+                        Parallax allows background images to move at a slower speed than the page content,  
+                        adding depth and a modern visual experience.
+                    </p>
+                    <p>
+                        To add a parallax background image, wrap your section with the <code>.jarallax</code> class  
+                        and include an <code>&lt;img&gt;</code> tag with the <code>.jarallax-img</code> class inside.
+                    </p>
+
+                    <pre>
+&lt;section data-speed="0.2" class="jarallax"&gt;
+    &lt;img class="jarallax-img" src="images/bg.jpg" alt=""&gt;
+    &lt;div class="container"&gt;
+        &lt;h2&gt;Your Content Here&lt;/h2&gt;
+        &lt;p&gt;Add text, images, or buttons above the parallax background.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</pre>
+
+                    <ul>
+                        <li><strong>data-speed</strong> – Controls the parallax movement speed (range: 0.1 to 1.0).  
+                            Lower values = slower movement (more subtle effect).</li>
+                        <li><strong>images/bg.jpg</strong> – Path to your background image file.</li>
+                    </ul>
+
+                    <p><strong>Tip:</strong> Use large, high-quality background images (min. 1920×1080) for best results.</p>
+                </div>
+            </div>
+
+            <div class="expand">
+                <div class="title">Parallax Background Video</div>
+                <div class="content">
+                    <p>
+                        Jarallax also supports video backgrounds from YouTube, Vimeo, or local MP4 files.  
+                        This feature is great for hero sections or landing pages that need dynamic visuals.
+                    </p>
+                    <p>
+                        To use a video background, simply include the <code>data-video-src</code> attribute  
+                        inside your <code>.jarallax</code> container:
+                    </p>
+
+                    <pre>
+&lt;div class="jarallax" data-jarallax data-video-src="https://www.youtube.com/watch?v=ab0TSkLe-E0"&gt;
+    &lt;div class="container text-center text-light"&gt;
+        &lt;h2&gt;Stunning Parallax Video&lt;/h2&gt;
+        &lt;p&gt;Overlay your content directly above the video background.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</pre>
+
+                    <ul>
+                        <li><strong>data-video-src</strong> – Accepts YouTube, Vimeo, or local video URLs (e.g. <code>mp4:videos/bg.mp4</code>).</li>
+                        <li><strong>data-jarallax</strong> – Initializes the video parallax effect.</li>
+                        <li><strong>.jarallax</strong> – Main container that applies the parallax logic.</li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+            <h2>Typography Customization</h2>
+
+            <div class="expand">
+                <div class="title">Change Font Family</div>
+                <div class="content">
+                    <p>
+                        The template uses <strong>Google Fonts</strong>.  
+                        You can change the font by editing the <strong>font import</strong> at the top of <code>style.css</code> or by updating the CSS variable.
+                    </p>
+
+                    <pre>
+/* Example: change font to "Poppins" */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --body-font: "Poppins", Helvetica, Arial, sans-serif;
+    --heading-font: "Poppins", Helvetica, Arial, sans-serif;
+}</pre>
+
+                    <p><strong>Tip:</strong> Always include fallback fonts (e.g., Helvetica, Arial) for better browser compatibility.</p>
+                </div>
+            </div>
+
+            <div class="expand">
+                <div class="title">Adjust Font Weight</div>
+                <div class="content">
+                    <p>
+                        Font weights define how bold or light the text appears.  
+                        You can adjust them by editing the following CSS variables:
+                    </p>
+
+                    <pre>
+:root {
+    --body-font-weight: 400;
+    --heading-font-weight: 600;
+}</pre>
+
+                    <p>Common weight values: <code>300</code> (light), <code>400</code> (normal), <code>500</code> (medium), <code>600</code> (semi-bold), <code>700</code> (bold).</p>
+                </div>
+            </div>
+
+            <div class="expand">
+                <div class="title">Change Font Color</div>
+                <div class="content">
+                    <p>
+                        You can easily update the default text and heading colors by modifying these variables:
+                    </p>
+
+                    <pre>
+:root {
+    --body-font-color: #888888;
+    --heading-font-color: #181D24;
+}</pre>
+
+                    <p><strong>Tip:</strong> Use <code>--body-font-color-bg-dark</code> and <code>--heading-font-color-bg-dark</code>  
+                    for text displayed on dark backgrounds.</p>
+                </div>
+            </div>
+
+            <div class="expand">
+                <div class="title">Change Font Size</div>
+                <div class="content">
+                    <p>
+                        Each text level has its own variable for font size.  
+                        Update the size values as needed:
+                    </p>
+
+                    <pre>
+:root {
+    --body-font-size: 17px;
+    --h1-font-size: 60px;
+    --h2-font-size: 48px;
+    --h3-font-size: 26px;
+}</pre>
+
+                    <p><strong>Note:</strong> Adjusting <code>--body-font-size</code> affects all paragraph text sitewide.</p>
+                </div>
+            </div>
+
+            <div class="expand">
+                <div class="title">Letter Spacing</div>
+                <div class="content">
+                    <p>
+                        Letter spacing controls the space between characters.  
+                        Edit these variables to adjust the spacing for headings or text:
+                    </p>
+
+                    <pre>
+:root {
+    --h1-letter-spacing: -0.02em;
+    --h2-letter-spacing: -0.02em;
+    --h3-letter-spacing: 0;
+}</pre>
+
+                    <p>Use small values (e.g., <code>0.05em</code> or <code>-0.02em</code>) for subtle effects.</p>
+                </div>
+            </div>
+
+            <div class="expand">
+                <div class="title">Line Height</div>
+                <div class="content">
+                    <p>
+                        Line height defines the vertical spacing between lines of text.  
+                        Adjust these variables to improve readability or text compactness:
+                    </p>
+
+                    <pre>
+:root {
+    --h1-line-height: 1.15em;
+    --h2-line-height: 1.2em;
+    --h3-line-height: 1.5em;
+}</pre>
+
+                    <p>For body text, use a value between <code>1.5em</code> and <code>1.8em</code> for optimal legibility.</p>
+                </div>
+            </div>
+
+            <div class="expand">
+                <div class="title">Bottom Margin</div>
+                <div class="content">
+                    <p>
+                        The bottom margin controls the space below headings.  
+                        Adjust these values for tighter or looser layout spacing:
+                    </p>
+
+                    <pre>
+:root {
+    --h1-margin-bottom: 20px;
+    --h2-margin-bottom: 25px;
+    --h3-margin-bottom: 10px;
+}</pre>
+
+                    <p><strong>Tip:</strong> Keep consistent spacing across heading levels for a clean visual rhythm.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =============================== -->
+        <!-- ANIMATION & EFFECTS -->
+        <!-- =============================== -->
+        <section>
+            <h2>Animations & Effects</h2>
+
+            <div class="expand">
+                <div class="title">Animate Objects on Scroll</div>
+                <div class="content">
+                    <p>
+                        The template integrates <strong>WOW.js</strong> and <strong>Animate.css</strong>  
+                        to easily trigger animations when elements enter the viewport while scrolling.
+                    </p>
+
+                    <pre>
+&lt;h1 class="wow fadeIn" data-wow-delay=".2s" data-wow-duration=".5s"&gt;
+    Animate Text
+&lt;/h1&gt;</pre>
+
+                    <ul>
+                        <li>
+                            Add the <code>.wow</code> class to any element you want to animate.
+                        </li>
+                        <li>
+                            The <code>fadeIn</code> class defines the animation type.  
+                            You can explore more animation options from <a href="https://animate.style/" target="_blank">Animate.css</a>.
+                        </li>
+                        <li>
+                            Use <code>data-wow-delay</code> to set how long to wait before the animation starts (e.g., <code>.2s</code>).
+                        </li>
+                        <li>
+                            Use <code>data-wow-duration</code> to control how long the animation lasts (e.g., <code>.5s</code>).
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =============================== -->
+        <!-- FORMS -->
+        <!-- =============================== -->
+        <section>
+            <h2>Forms</h2>
+
+            <div class="expand">
+                <div class="title">Change Visit Form Recipient Email</div>
+                <div class="content">
+                    <p>
+                        To change where join form submissions are sent,  
+                        open the <strong>join.php</strong> file and update the recipient email address:
+                    </p>
+
+                    <pre>$to = 'email@your-domain.com';</pre>
+
+                    <p>
+                        Replace <code>email@your-domain.com</code> with your actual email address.  
+                        Ensure it uses a valid domain (for example, <code>join@yourwebsite.com</code>).
+                    </p>
+
+                    <p><strong>Tip:</strong> After updating, test your form to ensure emails are delivered properly.  
+                    If you experience delivery issues, consider using SMTP email configuration for reliability.</p>
+                </div>
+            </div>
+
+            <div class="expand">
+                <div class="title">Change Visit Email Subject</div>
+                <div class="content">
+                    <p>
+                        To customize the subject line of join form emails,  
+                        open the <strong>join.php</strong> file and edit the following line:
+                    </p>
+
+                    <pre>$subject = 'New Visit Request';</pre>
+
+                    <p>
+                        The subject appears in the email header you receive when a user submits the form.
+                    </p>
+
+                </div>
+            </div>
+
+        </section>
+
+        <section>
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="title">Need More Help?</h1>
+                    <p>
+                        If you can’t find the answer you’re looking for, 
+                        feel free to reach out to us directly through the <a href="https://themeforest.net/user/designesia/"><strong>item page</strong></a>.
+                    </p>
+                    <p>
+                        We also welcome your <strong>suggestions, feedback, and feature requests</strong>.
+                        Your input helps us make the product even better.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/easing.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>
