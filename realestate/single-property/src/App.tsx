@@ -1,10 +1,12 @@
 import React from 'react';
 
-import './assets/css/colors/scheme-01.css';
 import './assets/css/bootstrap.min.css';
 import './assets/css/plugins.css';
-
 import './assets/css/style.css';
+import './assets/css/coloring.css';
+import './assets/css/swiper-custom-1.css';
+import './assets/css/colors/scheme-01.css';
+import './assets/css/datepicker.css';
 // ...other CSS imports
 
 import Header from './components/Header';
