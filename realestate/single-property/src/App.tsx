@@ -1,5 +1,6 @@
 import React from 'react';
 
+import './assets/css/colors/scheme-01.css';
 import './assets/css/bootstrap.min.css';
 import './assets/css/plugins.css';
 
