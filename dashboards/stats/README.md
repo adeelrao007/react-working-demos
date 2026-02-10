@@ -1,6 +1,13 @@
 # ReactJS Stats Dashboard
 
-This project is a simple stats dashboard built with ReactJS and Tailwind CSS, following a Domain Driven folder structure. It features:
+## Project Highlights
+
+- **Built with [GitHub Copilot](https://github.com/features/copilot)** for rapid, AI-assisted development
+- **Domain Driven Design**: Clear separation between Service and API layers for maintainability and scalability
+- **ReactJS**: Modern, component-based UI
+- **Tailwind CSS**: Utility-first, responsive, and customizable styling
+
+## Features
 
 - White background, blue menu/buttons/headings, and colorful stats
 - Stats cards: Customers, Orders, Total Revenue, Today's Orders, Today's Revenue
@@ -9,7 +16,7 @@ This project is a simple stats dashboard built with ReactJS and Tailwind CSS, fo
 - Paginated Pending Orders list
 - Paginated New Customers list (this week)
 - Profile page with static content (editable)
-- All APIs return static data
+- All APIs return random static data for demo purposes
 
 ## Getting Started
 
@@ -23,13 +30,13 @@ This project is a simple stats dashboard built with ReactJS and Tailwind CSS, fo
    ```
 
 ## Folder Structure
-- `src/domain/` - Domain logic and data
+- `src/domain/` - Service layer (calls API layer)
+- `src/api/` - Static/random API mocks
 - `src/app/` - App-level components and pages
 - `src/shared/` - Shared UI components
-- `src/api/` - Static API mocks
 
 ## Customization
-- Update static data in `src/api/` as needed.
+- Update static/random data in `src/api/` as needed.
 - Replace placeholder charts with your own data if required.
 
 ---
