@@ -1,0 +1,14 @@
+# Node modules
+node_modules/
+
+# Build cache
+node_modules/.cache/
+
+# Build output
+build/
+dist/
+
+# Misc
+.env
+*.log
+.DS_Store
