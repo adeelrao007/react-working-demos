@@ -7,7 +7,7 @@
 - **ReactJS**: Modern, component-based UI
 - **Tailwind CSS**: Utility-first, responsive, and customizable styling
 
-## Features
+## Features/Context
 
 - White background, blue menu/buttons/headings, and colorful stats
 - Stats cards: Customers, Orders, Total Revenue, Today's Orders, Today's Revenue
