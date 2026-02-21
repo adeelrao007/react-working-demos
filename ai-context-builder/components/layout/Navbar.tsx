@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { createClient } from "@/lib/supabase/server"
 
 export default async function Navbar() {
@@ -9,11 +10,21 @@ export default async function Navbar() {
     <header className="border-b bg-white text-black">
       <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
         <Link href="/" className="font-bold text-lg">
-          AI Context Builder
+          <Image
+            src="/logo.png"
+            alt="AI Context Builder Logo"
+            width={120}
+            height={48}
+            style={{ height: '80px', width: 'auto' }}
+            priority
+          />
         </Link>
 
         <nav className="space-x-6 text-sm flex items-center">
-          <Link href="/pricing">Pricing</Link>
+          <Link href="/context-generator" className="btn ml-4 px-4 py-2 rounded-lg font-semibold" style={{backgroundColor: 'var(--button-main)', color: '#fff'}}>
+            Getting Started
+          </Link>
+          {/* <Link href="/pricing">Pricing</Link> */}
 
           {user ? (
             <>
@@ -25,13 +36,13 @@ export default async function Navbar() {
             </>
           ) : (
             <>
-              <Link href="/login">Login</Link>
-              <Link
+              {/* <Link href="/login">Login</Link> */}
+              {/* <Link
                 href="/register"
                 className="bg-black text-white px-4 py-2 rounded-lg"
               >
                 Get Started
-              </Link>
+              </Link> */}
             </>
           )}
         </nav>
